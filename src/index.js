@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+// import * as serviceWorker from './serviceWorker';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import AboutUs from './About.js';
-import GetStarted from './GetStarted.js'
+import GetStarted from './GetStarted.js';
+
 const routing = (
     <Router>
       <div>

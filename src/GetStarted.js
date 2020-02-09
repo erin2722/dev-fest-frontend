@@ -4,6 +4,7 @@ import styled from "styled-components";
 import BackgroundImage from './calendar3.jpg';
 import InputForm from './InputForm.js';
 
+
 const Wrap = styled.div`
   color: black;
   font-size: 50px;
@@ -91,23 +92,6 @@ const Body = styled.div`
       opacity:1;
     }
   }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
 `;
 
 const BodyText = styled.div`
@@ -115,11 +99,10 @@ const BodyText = styled.div`
   padding-top: 30px;
   float: left;
   padding-left: 9rem;
-//   padding-right: 27rem;
   color: black;
   font-family: 'Nunito Sans', sans-serif;
   display: flex;
-  width: 77%
+  width: 77%;
   flex-direction: column;
   fade-in {
     animation: fadeIn ease 1.5s;
@@ -154,23 +137,6 @@ const BodyText = styled.div`
       opacity:1;
     }
   }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
 `;
 
 const BlockQuote = styled.div`
@@ -254,6 +220,65 @@ const Bodytextcontainer = styled.div`
 
 function App() {
     var tasks = ['hi', 'there', 'shruti is the best']
+=======
+`;
+
+// const BlockQuote = styled.div`
+//   font-size: 20px;
+//   color: black;
+//   padding-top: 30px;
+//   padding-left: 5rem;
+//   padding-right: 15rem;
+//   display: flex;
+//   font-family: 'Nunito Sans', sans-serif;
+
+//   fade-in {
+//     animation: fadeIn ease 1.5s;
+//     -webkit-animation: fadeIn ease 1.5s;
+//     -moz-animation: fadeIn ease 1.5s;
+//     -o-animation: fadeIn ease 1.5s;
+//     -ms-animation: fadeIn ease 1.5s;
+//   }
+//   @keyframes fadeIn {
+//     0% {
+//       opacity:0;
+//     }
+//     100% {
+//       opacity:1;
+//     }
+//   }
+  
+//   @-moz-keyframes fadeIn {
+//     0% {
+//       opacity:0;
+//     }
+//     100% {
+//       opacity:1;
+//     }
+//   }
+  
+//   @-webkit-keyframes fadeIn {
+//     0% {
+//       opacity:0;
+//     }
+//     100% {
+//       opacity:1;
+//     }
+//   }
+// `;
+// const Image = styled.div`
+//     padding: 30px 25px 0px 25px;
+// `;
+
+// const Bodytextcontainer = styled.div`
+//     width: 100%;
+//     height: auto;
+//     display: flex;
+//     flex-direction: row;
+// `;
+
+function App() {
+  var tasks = ['physics pset', 'discrete pset', 'data structures pset'];
   return (
     <Wrap>
       <NavBar>

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import BackgroundImage from './calendar3.jpg';
-import devfestApi from './api/DevFestApi.js'
+//import devfestApi from './api/DevFestApi.js';
 
 const Wrap = styled.div`
   color: black;
@@ -106,7 +106,7 @@ const Body = styled.div`
     100% {
       opacity:1;
     }
-`;
+  }`;
 
 const BodyText = styled.div`
   text-align: center;
@@ -150,26 +150,9 @@ const BodyText = styled.div`
       opacity:1;
     }
   }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
 `;
-function App() {
 
+function App() {
   return (
     <Wrap>
       <NavBar>
