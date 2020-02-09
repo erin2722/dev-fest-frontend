@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import './App.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import DateFormat from 'dateformat';
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  background-color: lightgray;
+  background-color: #ecf0f1;
   padding: 15px;
   width: 500px;
 `;
@@ -22,9 +23,7 @@ const NameForm = styled.select`
   padding: 5px;
   background-color: #bbbeff;
   width: 140px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
   :focus {
     outline: none;
