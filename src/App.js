@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import BackgroundImage from './calendar3.jpg';
+import devfestApi from './api/DevFestApi.js'
 
 const Wrap = styled.div`
   color: black;
@@ -168,6 +169,7 @@ const BodyText = styled.div`
     }
 `;
 function App() {
+
   return (
     <Wrap>
       <NavBar>
