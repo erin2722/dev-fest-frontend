@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import BackgroundImage from './calendar3.jpg';
-//import devfestApi from './api/DevFestApi.js';
+import InputForm from './components/InputForm.jsx';
 
 const Wrap = styled.div`
   color: black;
   font-size: 50px;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${BackgroundImage});
+  
   background-size: cover;
   font-family: 'Nunito Sans', sans-serif;
 `;
@@ -48,75 +48,16 @@ const Title = styled.div`
 `;
 
 const Body = styled.div`
-  font-size: 65px;
-  text-align: center;
+  font-size: 30px;
+  float: left;
+  padding-left: 9rem;
+  padding-right: 20rem;
+  padding-top: 2rem;
   font-weight: 700;
-  padding-top: 20rem;
-  color: 	white;
+  color: 	black;
   word-spacing: 1px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   
-  fade-in {
-    animation: fadeIn ease 1.5s;
-    -webkit-animation: fadeIn ease 1.5s;
-    -moz-animation: fadeIn ease 1.5s;
-    -o-animation: fadeIn ease 1.5s;
-    -ms-animation: fadeIn ease 1.5s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }`;
-
-const BodyText = styled.div`
-  text-align: center;
-  padding-top: 60px;
-  font-size: 23px;
-  color: white;
-  padding-left: 250px;
-  padding-right: 250px;
-  font-family: 'Montserrat', sans-serif;
-
   fade-in {
     animation: fadeIn ease 1.5s;
     -webkit-animation: fadeIn ease 1.5s;
@@ -152,17 +93,116 @@ const BodyText = styled.div`
   }
 `;
 
+const BodyText = styled.div`
+  font-size: 20px;
+  padding-top: 30px;
+  float: left;
+  padding-left: 9rem;
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  width: 77%;
+  flex-direction: column;
+  fade-in {
+    animation: fadeIn ease 1.5s;
+    -webkit-animation: fadeIn ease 1.5s;
+    -moz-animation: fadeIn ease 1.5s;
+    -o-animation: fadeIn ease 1.5s;
+    -ms-animation: fadeIn ease 1.5s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+`;
+
+// const BlockQuote = styled.div`
+//   font-size: 20px;
+//   color: black;
+//   padding-top: 30px;
+//   padding-left: 5rem;
+//   padding-right: 15rem;
+//   display: flex;
+//   font-family: 'Nunito Sans', sans-serif;
+
+//   fade-in {
+//     animation: fadeIn ease 1.5s;
+//     -webkit-animation: fadeIn ease 1.5s;
+//     -moz-animation: fadeIn ease 1.5s;
+//     -o-animation: fadeIn ease 1.5s;
+//     -ms-animation: fadeIn ease 1.5s;
+//   }
+//   @keyframes fadeIn {
+//     0% {
+//       opacity:0;
+//     }
+//     100% {
+//       opacity:1;
+//     }
+//   }
+  
+//   @-moz-keyframes fadeIn {
+//     0% {
+//       opacity:0;
+//     }
+//     100% {
+//       opacity:1;
+//     }
+//   }
+  
+//   @-webkit-keyframes fadeIn {
+//     0% {
+//       opacity:0;
+//     }
+//     100% {
+//       opacity:1;
+//     }
+//   }
+// `;
+// const Image = styled.div`
+//     padding: 30px 25px 0px 25px;
+// `;
+
+// const Bodytextcontainer = styled.div`
+//     width: 100%;
+//     height: auto;
+//     display: flex;
+//     flex-direction: row;
+// `;
+
 function App() {
+  var tasks = ['physics pset', 'discrete pset', 'data structures pset'];
   return (
     <Wrap>
       <NavBar>
         <Title> TIMESORT </Title>
-        <a href="/"> Home </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="/"> Home </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <a href="/AboutUs"> About Us </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://google.com"> Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </NavBar>
-        <Body> <fade-in> Don't Waste Time Scheduling Time </fade-in> </Body>
-        <BodyText> <fade-in> Clean up your life with in automated, adaptable, and intelligent scheduling system. Give us your pile of due dates and deadlines, and we'll give you a solution. </fade-in> </BodyText>
+        <InputForm tasks = {tasks} />
     </Wrap>
   );
 }
