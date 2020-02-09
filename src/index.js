@@ -5,12 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import AboutUs from './About.js';
-//<script src="https://js.stripe.com/v3/" />
+import GetStarted from './GetStarted.js'
 const routing = (
     <Router>
       <div>
         <Route exact path="/" component={App} />
         <Route path="/AboutUs" component={AboutUs} />
+        <Route path = "/GetStarted" component={GetStarted} />
       </div>
     </Router>
   )
