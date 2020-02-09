@@ -111,13 +111,15 @@ const Body = styled.div`
 
 const BodyText = styled.div`
   font-size: 20px;
-  padding-top: 70px;
+  padding-top: 30px;
   float: left;
   padding-left: 9rem;
-  padding-right: 27rem;
+//   padding-right: 27rem;
   color: black;
   font-family: 'Nunito Sans', sans-serif;
-  display: inline-block;
+  display: flex;
+  width: 77%
+  flex-direction: column;
   fade-in {
     animation: fadeIn ease 1.5s;
     -webkit-animation: fadeIn ease 1.5s;
@@ -176,7 +178,7 @@ const BlockQuote = styled.div`
   padding-top: 30px;
   padding-left: 5rem;
   padding-right: 15rem;
-  display: inline-block;
+  display: flex;
   font-family: 'Nunito Sans', sans-serif;
 
   fade-in {
@@ -233,14 +235,13 @@ const BlockQuote = styled.div`
 `;
 
 const Image = styled.div`
-display: inline-block;
-float: right;
-& > img {
-    display: inline-block
-    padding-right: 0px;
-    height: 100px;
-    width: auto;
-}
+padding: 30px 25px 0px 25px;
+// display: flex;
+// & > img {
+//     display: flex;
+//     height: 100px;
+//     width: auto;
+// }
 `;
 
 const Bodytextcontainer = styled.div`
@@ -256,19 +257,27 @@ function App() {
       <NavBar>
         <Title> TIMESORT </Title>
         <a href="/"> Home </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            <a href="https://google.com"> Features </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/AboutUs"> About Us </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://google.com"> Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </NavBar>
-        <Body> <fade-in> An Online Scheduling System Meant to Revolutionize Students' Relationship with Time </fade-in> </Body>
+        <Body> 
+            <fade-in> An Online Scheduling System Meant to Revolutionize Students' Relationship with Time </fade-in> 
+        </Body>
         <Bodytextcontainer>
-        <BodyText> 
-        We here at TimeSort recognize the struggles that college students go through in terms of time management. Most find it cumbersome to plan out their days, and those that don't often find themselves spending exorbitant amounts of time writing and re-writing schedules as their plans change. Researchers have found that this struggle can result in unfortunate consequences: 
-            <BlockQuote> 
-            <fade-in> "A new nationwide survey commissioned by FileMaker, Inc. reveals that college students are having problems with workload and organizational skills affecting their grades... 54 percent felt they would get better grades if they 'got organized and stayed organized.' " 
-            </fade-in> </BlockQuote> <p></p> <p> </p> <p> </p>
-            <fade-in> TimeSort takes this burden off of the user by automatically and intelligently scheduling in tasks based on due-date and duration, quickly adapting to changes in the user's schedule. By using TimeSort, students can spend their time in school focusing on the things that really matter. </fade-in>
-</BodyText> 
-<Image> <img alt="Image result for time management gifs" src="https://media3.giphy.com/media/3o7abq03xTfJgsnIas/giphy.gif"></img> </Image>
+            <BodyText> 
+                <fade-in>
+                We here at TimeSort recognize the struggles that college students go through in terms of time management. Most find it cumbersome to plan out their days, and those that don't often find themselves spending exorbitant amounts of time writing and re-writing schedules as their plans change. Researchers have found that this struggle can result in unfortunate consequences: 
+                </fade-in>
+                <BlockQuote> 
+                    <fade-in> 
+                        "A new nationwide survey commissioned by FileMaker, Inc. reveals that college students are having problems with workload and organizational skills affecting their grades... 54 percent felt they would get better grades if they 'got organized and stayed organized.' " 
+                    </fade-in> 
+                </BlockQuote> <p></p>
+                <fade-in> 
+                    TimeSort takes this burden off of the user by automatically and intelligently scheduling in tasks based on due-date and duration, quickly adapting to changes in the user's schedule. By using TimeSort, students can spend their time in school focusing on the things that really matter. 
+                </fade-in>
+            </BodyText> 
+            <Image> <img alt="Image result for time management gifs" src="https://media3.giphy.com/media/3o7abq03xTfJgsnIas/giphy.gif" width="100%"></img> </Image>
         </Bodytextcontainer>
     </Wrap>
   );
