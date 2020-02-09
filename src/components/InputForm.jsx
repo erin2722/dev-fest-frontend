@@ -31,6 +31,10 @@ const NameForm = styled.select`
   }
 `;
 
+const TypeNameForm = styled.input`
+    display: ${props => (props.show ? "" : "none")};
+`;
+
 const TimeForm = styled.div``;
 
 const Option = styled.option`
@@ -58,6 +62,7 @@ class InputForm extends Component {
     super(props);
     this.state = {
       nameValue: "",
+      showTypeName: false,
       timeValue: "",
       startDate: new Date(),
       formattedDate: ""
@@ -81,9 +86,16 @@ class InputForm extends Component {
 
   handleTaskChange(event) {
     console.log(event.target.value)
-    this.setState({
-        nameValue: event.target.value
-    })
+    if(event.target.value === "new") {
+        this.setState({
+            nameValue: event.target.value,
+            showTypeName: true
+        })
+    } else {
+        this.setState({
+            nameValue: event.target.value
+        })
+    }
   }
 
   handleTimeChange(event) {
@@ -121,6 +133,8 @@ class InputForm extends Component {
             </Option>
           ))}
         </NameForm>
+        <TypeNameForm type = "text" name = "name" onChange = {this.handleTaskChange} show = {this.state.showTypeName} />
+
         <TimeForm>
             How much time will this task take? (Enter in Hours)
             <div><input type = "text" name = "time" onChange = {this.handleTimeChange} /></div>
